@@ -1,24 +1,14 @@
-<html>
-   <head>
-       <title>Ana's blog</title>
-   </head>
-   <body>
-    <p>Hi there!</p>
-    <p>It works!</p>
-    
-    <!--<div>
-       <p>published: 22.04.2018, 13:30</p>
-        <h3><a href="#">My first post</a></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum asperiores omnis atque eius esse incidunt a obcaecati necessitatibus libero, dicta, iste voluptatibus aliquam nam veniam illum ratione consectetur qui amet! Tenetur voluptates, iure? Autem asperiores quis quisquam reiciendis! Labore eveniet at id eum temporibus quae assumenda provident alias, veritatis culpa.</p>
-    </div>-->
-    <!--{{ posts }}-->
-    
-    {% for post in posts %}
-    <div>
+{% extends 'blog/base.html' %}
+
+{% block content %}
+{% for post in posts %}
+    <div class="post">
+       <div class="date">
         <p>published: {{ post.published_date }}</p>
-        <h1><a href="#">{{ post.title }}</a></h1>
+        </div>
+        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
         <p>{{ post.text|linebreaksbr }}</p>
+        <hr>
     </div>
-    {% endfor %}
-    </body>
-</html>
+{% endfor %}
+{% endblock %}

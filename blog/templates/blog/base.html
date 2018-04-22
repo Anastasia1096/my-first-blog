@@ -1,0 +1,41 @@
+{% load staticfiles %}
+<html>
+
+<head>
+    <title>Ana's blog</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+   <div class="page-header">
+       <h1><a href="#">Django Girls Blog</a></h1>
+   </div>
+   <div class="presentazione">
+    <p>Hi there!</p>
+    <p>It works!</p>
+    </div>
+    
+    <hr>
+    
+    <!--<div>
+       <p>published: 22.04.2018, 13:30</p>
+        <h3><a href="#">My first post</a></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum asperiores omnis atque eius esse incidunt a obcaecati necessitatibus libero, dicta, iste voluptatibus aliquam nam veniam illum ratione consectetur qui amet! Tenetur voluptates, iure? Autem asperiores quis quisquam reiciendis! Labore eveniet at id eum temporibus quae assumenda provident alias, veritatis culpa.</p>
+    </div>-->
+    <!--{{ posts }}-->
+    
+    <div class="content container">
+    <div class="row">
+    <div class="col-md-8">
+    {% block content %}
+    {% endblock %}
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>

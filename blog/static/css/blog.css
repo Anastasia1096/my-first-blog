@@ -1,0 +1,29 @@
+h1 a {
+    color: #9cc168;
+    font-family: 'Lobster';
+}
+
+body {
+    padding: 15px;
+}
+
+.page-header {
+    background-color: #ffd800;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: white;
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+p {
+    font-family: 'Lobster', cursive;
+}
+
+.presentazione {
+    color: #9cc168;
+    padding: 15px;
+}
