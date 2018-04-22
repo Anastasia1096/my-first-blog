@@ -5,10 +5,20 @@
    <body>
     <p>Hi there!</p>
     <p>It works!</p>
-    <div>
+    
+    <!--<div>
        <p>published: 22.04.2018, 13:30</p>
         <h3><a href="#">My first post</a></h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum asperiores omnis atque eius esse incidunt a obcaecati necessitatibus libero, dicta, iste voluptatibus aliquam nam veniam illum ratione consectetur qui amet! Tenetur voluptates, iure? Autem asperiores quis quisquam reiciendis! Labore eveniet at id eum temporibus quae assumenda provident alias, veritatis culpa.</p>
+    </div>-->
+    <!--{{ posts }}-->
+    
+    {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="#">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
+    {% endfor %}
     </body>
 </html>
